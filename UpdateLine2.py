@@ -21,3 +21,29 @@ filePointer = open("ModifyLine2.txt", "wt")
 filePointer.write(data)
 #finally closing the file
 filePointer.close()
+
+
+
+"""
+
+
+Method 2 This is the approach that we discussed during our phone conversation
+
+
+# with is like your try .. finally block in this case
+with open('ModifyLine2.txt', 'r') as file:
+    # read a list of lines into data
+    data = file.readlines()
+
+
+
+# now change the 2nd line, note that you have to add a newline
+data[1] = 'siva 2020'
+
+# and write everything back
+with open('ModifyLine2.txt', 'w') as file:
+    file.writelines( data )
+
+
+
+"""
